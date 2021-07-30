@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    position: fixed;
+    background-color: #12C998;
+    justify-content: space-around;
+    color: #fff;
+    height: 50px;
+    align-items: center;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 99999;
+}
+
+nav .logos img{
+    width: 150px;
+    height: 80px;
+}
+
+nav .menu{
+    padding-left: 400px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 300px;
+    width: 20%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #000;
+}
+
+/* Navigation for mobile phone */
+.navi{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'menu menu1 menu2 menu3 menu4';
+    background-color:#12C998;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    height: 70px;
+    opacity: 0;
+}
+
+.navi .menu a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+.navi .menu:nth-child(1){
+    grid-area: menu1;
+    z-index: 88;
+}
+
+.navi .menu:nth-child(2){
+    grid-area: menu2;
+}
+
+.navi .menu:nth-child(3){
+    grid-area: menu3;
+}
+
+.navi .menu:nth-child(4){
+    grid-area: menu4;
+}
+
+.navi .menu .black{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    margin-left: -30px;
+    margin-top: -63px;
+    background-color: black;
+    opacity: 0.2;
+}
+
+/* Container */
+.container{
+    padding-top: 50px;
+}
+
+.container .pesan .pesans{
+    width: 97%;
+    height: 50px;
+    padding: 0 30px;
+    background-color: whitesmoke;
+    margin-bottom: 5px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.container .pesan .pesans.coming{
+    opacity: 1;
+}
+
+.container .pesan .pesans img{
+    width: 30px;
+}
+
+.container .pesan .pesans .delete{
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container .pesan .pesans .delete:hover{
+    color: red;
+}
+
+.container .pesan .pesans p{
+    display: inline-block;
+}
+
+.container .hapus{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 1470px;
+}
+
+.container .hapus img{
+    width: 30px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.container .hapus img:hover{
+    transform: scale(1.1);
+}
+
+.container .unit{
+    opacity: 0;
+}
+/* Footer */
+footer{
+    bottom: 0;
+    margin-top: 90px;
+}
+
+footer .footer{
+    background-color: #12C998;
+    color: #fff;
+    height: 50px;
+    bottom: 0;
+}
+
+footer .footer p{
+    font-size: 12px;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer .information{
+    background-color: whitesmoke;
+    height: 300px;
+}
+
+.Category{
+    padding-top: 30px;
+    float: left;
+    padding-left: 140px;
+}
+
+.Category p{
+    line-height: 30px;
+}
+
+.Category h3{
+    color: #116466;
+}
+
+.Category a{
+    text-decoration: none;
+    color: #12C998;
+}
+
+.Category a:hover{
+    color: chocolate;
+}
+
+.Connect{
+    float: right;
+    padding-right: 150px;
+    padding-top: 30px;
+}
+
+.Connect h3{
+    color: #116466;
+}
+
+.contacts{
+    padding-top: 23px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.Connect .contacts img:hover{
+    transform: scale(1.2);
+}
+
+/* Responsive breakpoints */
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+    nav{
+        opacity: 0;
+    }
+
+    .navi{
+        opacity: 1;
+    }
+    
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin-left: 900px;
+        width: 20%;
+        justify-content: space-between;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+
+    .container{
+        margin-left: 90px;
+    }
+
+    .container .pesan .pesans{
+        width: 95%;
+        height: 60px;
+        padding: 0 30px;
+        background-color: whitesmoke;
+        margin-bottom: 5px;
+        z-index: 2;
+    }
+    
+    .container .pesan .pesans img{
+        width: 20px;
+        padding-top: 10px;
+    }
+    
+    .container .pesan .pesans .delete{
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        margin-left: 50px;
+    }
+
+    .container .pesan .pesans .delete:nth-child(1){
+        position: absolute;
+    }
+
+    .container .pesan .pesans .delete:nth-child(2),
+    .container .pesan .pesans .delete:nth-child(3){
+        position: absolute;
+        margin-top: -10px;
+    }
+    
+    .container .pesan .pesans p{
+        display: inline-block;
+        margin-left: 20px;
+        z-index: 2;
+    }
+
+    .container .pesan .pesans:nth-child(2) p,
+    .container .pesan .pesans:nth-child(3) p{
+        margin-top: -30px;
+        padding-left: 10px;
+        z-index: 888;
+    }
+    
+    .container .hapus{
+        margin-bottom: 20px;
+        margin-left: 550px;
+    }
+    
+    .container .hapus img{
+        width: 30px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    
+    .container .hapus img:hover{
+        transform: scale(1.1);
+    }
+
+    .container .unit{
+        opacity: 1;
+        background-color: #12C998;
+        width: 100%;
+        height: 50px;
+        margin-top: -50px;
+    }
+
+    .container .unit h2{
+        color: white;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    footer .footer{
+       opacity: 0;
+    }
+
+    footer .information{
+        background-color: whitesmoke;
+        height: 580px;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px){
+    nav{
+        opacity: 0;
+    }
+
+    .navi{
+        opacity: 1;
+    }
+    
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin-left: 900px;
+        width: 20%;
+        justify-content: space-between;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+
+    .container{
+        margin-left: 90px;
+    }
+
+    .container .pesan .pesans{
+        width: 85%;
+        height: 60px;
+        padding: 0 30px;
+        background-color: whitesmoke;
+        margin-bottom: 5px;
+        z-index: 2;
+    }
+    
+    .container .pesan .pesans img{
+        width: 20px;
+        padding-top: 10px;
+    }
+    
+    .container .pesan .pesans .delete{
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .container .pesan .pesans .delete:nth-child(1){
+        position: absolute;
+    }
+
+    .container .pesan .pesans .delete:nth-child(2),
+    .container .pesan .pesans .delete:nth-child(3){
+        position: absolute;
+        margin-top: -10px;
+    }
+    
+    .container .pesan .pesans p{
+        display: inline-block;
+        margin-left: 20px;
+        z-index: 2;
+    }
+
+    .container .pesan .pesans:nth-child(2) p,
+    .container .pesan .pesans:nth-child(3) p{
+        margin-top: -30px;
+        padding-left: 10px;
+        z-index: 888;
+    }
+    
+    .container .hapus{
+        margin-bottom: 20px;
+        margin-left: 350px;
+    }
+    
+    .container .hapus img{
+        width: 30px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    
+    .container .hapus img:hover{
+        transform: scale(1.1);
+    }
+
+    .container .unit{
+        opacity: 1;
+        background-color: #12C998;
+        width: 100%;
+        height: 50px;
+        margin-top: -50px;
+    }
+
+    .container .unit h2{
+        color: white;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    footer .footer{
+       opacity: 0;
+    }
+
+    footer .information{
+        background-color: whitesmoke;
+        height: 580px;
+    }
+}

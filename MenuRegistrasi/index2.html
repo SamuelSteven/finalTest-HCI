@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div class="color"></div>
+    <div class="container">
+
+        <h2>Welcome to Medicia! <br>Silahkan isi data dibawah ini.</h2>
+
+        <form id="contactId" name="contactForm" method="POST" action="#" onsubmit="return false;">
+            <div>
+                <label>Nama Lengkap<br></label> 
+                <input type="text" id="name" name="name" size="30" />
+            </div>
+            <div>
+                <label>Tempat Tinggal<br></label> 
+                <input type="text" id="street" name="street" size="30" />
+            </div>
+            <div>
+                <label>Tanggal Lahir<br></label> 
+                <input type="datetime-local" id="birthday" name="birthday">
+            </div>
+            <div>
+                <label>Pekerjaan<br></label> 
+                <input type="text" id="job" name="job" size="30" />
+            </div>
+            <div>
+                <label>Nomor Telepon<br></label> 
+                <input type="text" id="contact" name="contact" size="30" />
+            </div>
+            <div>
+                <input type="button" id="nextButtonId" name="nextButton" value="Next" onclick="submit_contact_json();"/>
+                <br>
+                <input type="button" id="cancelButtonId" name="postponeButton" value="Cancel"/>
+            </div>
+        </form>
+
+    </div>
+    <script src="signup2.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Color */
+.color{
+    background-color: #12C998;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+/* Container */
+.container{
+    margin: 20px 36%;
+}
+
+.container h2{
+    text-align: center;
+}
+
+.container form div{
+    margin-top: 25px;
+}
+
+/* Container Input */
+.container form #name,
+.container form #birthday,
+.container form #street,
+.container form #contact,
+.container form #job{
+    width: 300px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 5px;
+    box-shadow: 0px 2px 5px grey;
+    border: none;
+    text-indent: 25px;
+}
+
+.container form #birthday{
+    text-indent: 10px;
+}
+
+.container form #username::placeholder,
+.container form #password::placeholder{
+    font-size: 20px;
+}
+
+/* Container Input Label*/
+.container form label{
+    padding-left: 50px;
+}
+
+/* Container Button*/
+.container form #nextButtonId,
+.container form #cancelButtonId{
+    width: 100px;
+    margin: 0px 12%;
+    border-radius: 19px;
+    width: 300px;
+    height: 40px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.container form #nextButtonId{
+    margin-top: 25px;
+    background-color: #12C998;
+    box-shadow: 0px 2px 6px #000000;
+}
+
+.container form #cancelButtonId{
+    margin-top: 10px;
+    background-color: white;
+    color: #12C998;
+}
+
+/* Ukuran tablet */
+@media screen and (max-width: 768px){
+    .container h2{
+        margin-left: 0px;
+        font-size: 20px;
+        width: 300px;
+    }
+    .container form #name,
+    .container form #birthday,
+    .container form #street,
+    .container form #contact,
+    .container form #job{
+        width: 200px;
+        height: 30px;
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+    .container form label{
+        padding-left: 50px;
+    }
+    .container form #nextButtonId,
+    .container form #cancelButtonId{
+        margin-left: 50px;
+        width: 200px;
+    }
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 576px){
+    .container h2{
+        margin-left: -20px;
+        font-size: 20px;
+        width: 300px;
+    }
+    .container form #name,
+    .container form #birthday,
+    .container form #street,
+    .container form #contact,
+    .container form #job{
+        width: 200px;
+        height: 30px;
+        margin-left: 23px;
+        margin-top: 0px;
+    }
+    .container form label{
+        padding-left: 24px;
+    }
+    .container form #nextButtonId,
+    .container form #cancelButtonId{
+        width: 200px;
+    }
+}

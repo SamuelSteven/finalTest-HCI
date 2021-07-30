@@ -1,0 +1,595 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    position: fixed;
+    background-color: #12C998;
+    justify-content: space-around;
+    color: #fff;
+    height: 50px;
+    align-items: center;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 99999;
+}
+
+nav .logos img{
+    width: 150px;
+    height: 80px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 900px;
+    width: 20%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #000;
+}
+
+/* Hamburger Menu */
+.menu-toogle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toogle input{
+    position: absolute;
+    width: 41px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toogle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toogle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toogle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+
+.menu-toogle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toogle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/* Navigation for mobile phone */
+.navi{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'menu menu1 menu2 menu3 menu4';
+    background-color:#12C998;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    height: 70px;
+    opacity: 0;
+}
+
+.navi .menu a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+.navi .menu:nth-child(1){
+    grid-area: menu1;
+    z-index: 88;
+}
+
+.navi .menu:nth-child(2){
+    grid-area: menu2;
+}
+
+.navi .menu:nth-child(3){
+    grid-area: menu3;
+}
+
+.navi .menu:nth-child(4){
+    grid-area: menu4;
+}
+
+.navi .menu .black{
+    position: absolute;
+    width: 110px;
+    height: 70px;
+    margin-left: -40px;
+    margin-top: -63px;
+    background-color: black;
+    opacity: 0.2;
+}
+
+/* Container Logo */
+.container .logo{
+    background-image: url(../Gambar/LogoMedicia.png);
+    background-size: cover;
+    box-sizing: border-box;
+    width: 300px;
+    height: 150px;
+    margin: auto;
+}
+
+.container .jumbotron img{
+    width: 100%;
+    height: 580px;
+    background-size: cover;
+}
+
+/* Container Button */
+.container .booking #bookingButtonId{
+    margin-top: 40px;
+    margin-left: 33%;
+    border-radius: 19px;
+    width: 500px;
+    height: 60px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: #12C998;
+    box-shadow: 0px 2px 6px #000000;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.container .booking #bookingButtonId:hover{
+    transform: scale(1.2);
+}
+
+/* Container Content */
+.container .content{
+    margin-top: 90px;
+}
+
+.container .content .gambar{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(900px, 1fr)); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'header header'
+    'img1 img2'
+    'img3 img4';
+    gap: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 60px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+}
+
+.container .content .header{
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.container .content .header.fade{
+    opacity: 1;
+}
+
+.container .content h1{
+    grid-area: header;
+    padding-left: 140px;
+}
+
+.container .content hr{
+    width: 400px;
+    border: 2px solid black;
+    margin-left: 120px;
+    margin-top: 10px;
+}
+
+.container .content .gambar a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.container .content .gambar img{
+    width: 500px;
+    height: 250px;
+    box-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.container .content .gambar img:hover{
+    transform: scale(1.04);
+}
+
+.container .content .gambar .picture:nth-child(1){
+    grid-area: img1;
+    transition: 0.7s;
+    opacity: 0;
+}
+
+.container .content .gambar .picture:nth-child(2){
+    grid-area: img2;
+    transition: 0.7s;
+    opacity: 0;
+}
+
+.container .content .gambar .picture:nth-child(3){
+    grid-area: img3;
+    transition: 0.7s;
+    opacity: 0;
+}
+
+.container .content .gambar .picture:nth-child(4){
+    grid-area: img4;
+    transition: 0.7s;
+    opacity: 0;
+}
+
+.container .content .gambar .picture.coming:nth-child(1){
+    opacity: 1;
+}
+
+.container .content .gambar .picture.coming:nth-child(2){
+    opacity: 1;
+}
+
+.container .content .gambar .picture.coming:nth-child(3){
+    opacity: 1;
+}
+
+.container .content .gambar .picture.coming:nth-child(4){
+    opacity: 1;
+}
+
+/* Footer */
+footer .footer{
+    background-color: #12C998;
+    color: #fff;
+    height: 50px;
+    bottom: 0;
+}
+
+footer .footer p{
+    font-size: 12px;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer .information{
+    background-color: whitesmoke;
+    height: 300px;
+}
+
+.Category{
+    padding-top: 30px;
+    float: left;
+    padding-left: 140px;
+}
+
+.Category p{
+    line-height: 30px;
+}
+
+.Category h3{
+    color: #116466;
+}
+
+.Category a{
+    text-decoration: none;
+    color: #12C998;
+}
+
+.Category a:hover{
+    color: chocolate;
+}
+
+.Connect{
+    float: right;
+    padding-right: 150px;
+    padding-top: 30px;
+}
+
+.Connect h3{
+    color: #116466;
+}
+
+.contacts{
+    padding-top: 23px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.Connect .contacts img:hover{
+    transform: scale(1.2);
+}
+
+/* Responsive breakpoints */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+    nav{
+        opacity: 0;
+    }
+
+    .navi{
+        opacity: 1;
+    }
+    
+    nav .logos img{
+        width: 90px;
+        height: 40px;
+        margin-left: 40px;
+    }
+    
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin-left: 900px;
+        width: 20%;
+        justify-content: space-between;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+
+    .menu-toogle{
+        display: flex;
+    }
+
+    .container .booking #bookingButtonId{
+        margin-top: 60px;
+        margin-left: 36%;
+        border-radius: 19px;
+        width: 300px;
+        height: 60px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        background-color: #12C998;
+        box-shadow: 0px 2px 6px #000000;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    
+    .container .content h1{
+        grid-area: header;
+        padding-left: 220px;
+    }
+    
+    .container .content hr{
+        width: 360px;
+        border: 2px solid black;
+        margin-left: 220px;
+        margin-top: 10px;
+    }
+
+    .container .content .gambar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5;
+        grid-template-areas: 
+        'header'
+        'img1' 
+        'img2'
+        'img3' 
+        'img4';
+    }
+
+    .container .content .gambar img{
+        width: 350px;
+        height: 250px;
+        box-shadow: 2px 2px 8px black;
+        cursor: pointer;
+        transition: 0.2s;
+        z-index: 1;
+        margin-left: 90px;
+    }
+
+    .container .content .gambar a{
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        margin-left: 80px;
+    }
+
+    .container .jumbotron img{
+        width: 600px;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        margin-left: 110px;
+    }
+
+    .container .logo{
+        background-image: url(../Gambar/LogoMedicia.png);
+        background-size: cover;
+        box-sizing: border-box;
+        width: 250px;
+        height: 120px;
+        margin-left: 280px;
+    }
+
+    footer .footer{
+       opacity: 0;
+    }
+
+    footer .information{
+        background-color: whitesmoke;
+        height: 580px;
+    }
+    
+/* Ukuran Mobile */
+@media screen and (max-width: 576px){
+    nav{
+        opacity: 0;
+    }
+
+    .navi{
+        opacity: 1;
+    }
+    
+    nav .logos img{
+        width: 90px;
+        height: 40px;
+        margin-left: 40px;
+    }
+    
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin-left: 900px;
+        width: 20%;
+        justify-content: space-between;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+
+    .menu-toogle{
+        display: flex;
+    }
+
+    .container .booking #bookingButtonId{
+        margin-top: 60px;
+        margin-left: 31%;
+        border-radius: 19px;
+        width: 300px;
+        height: 60px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        background-color: #12C998;
+        box-shadow: 0px 2px 6px #000000;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    
+    .container .content h1{
+        grid-area: header;
+        padding-left: 130px;
+    }
+    
+    .container .content hr{
+        width: 350px;
+        border: 2px solid black;
+        margin-left: 140px;
+        margin-top: 10px;
+    }
+
+    .container .content .gambar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5;
+        grid-template-areas: 
+        'header'
+        'img1' 
+        'img2'
+        'img3' 
+        'img4';
+    }
+
+    .container .content .gambar img{
+        width: 350px;
+        height: 250px;
+        box-shadow: 2px 2px 8px black;
+        cursor: pointer;
+        transition: 0.2s;
+        z-index: 1;
+        margin-left: 90px;
+    }
+
+    .container .content .gambar a{
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        margin-left: 80px;
+    }
+
+    .container .jumbotron img{
+        width: 410px;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        margin-left: 110px;
+    }
+
+    .container .logo{
+        background-image: url(../Gambar/LogoMedicia.png);
+        background-size: cover;
+        box-sizing: border-box;
+        width: 250px;
+        height: 120px;
+        margin-left: 180px;
+    }
+
+    footer .footer{
+       opacity: 0;
+    }
+
+    footer .information{
+        background-color: whitesmoke;
+        height: 580px;
+    }
+}
+
+
+}

@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    position: fixed;
+    background-color: #12C998;
+    justify-content: space-around;
+    color: #fff;
+    height: 50px;
+    align-items: center;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 99999;
+}
+
+nav .logos img{
+    width: 150px;
+    height: 80px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 900px;
+    width: 20%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #000;
+}
+
+/* Navigation for mobile phone */
+.navi{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'menu menu1 menu2 menu3 menu4';
+    background-color:#12C998;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    height: 70px;
+    opacity: 0;
+}
+
+.navi .menu a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+.navi .menu:nth-child(1){
+    grid-area: menu1;
+    z-index: 88;
+}
+
+.navi .menu:nth-child(2){
+    grid-area: menu2;
+}
+
+.navi .menu:nth-child(3){
+    grid-area: menu3;
+}
+
+.navi .menu:nth-child(4){
+    grid-area: menu4;
+}
+
+.navi .menu .black{
+    position: absolute;
+    width: 90px;
+    height: 70px;
+    margin-left: -20px;
+    margin-top: -63px;
+    background-color: black;
+    opacity: 0.2;
+}
+
+/* Container Input */
+.container .form #bookingButtonId,
+.container .form #canceButtonId{
+    width: 300px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+    box-shadow: 0px 2px 5px grey;
+    border: none;
+    text-indent: 25px;
+}
+
+/* Container Button*/
+.container .form #bookingButtonId,
+.container .form #cancelButtonId{
+    margin: 0px 12%;
+    border-radius: 19px;
+    width: 260px;
+    height: 40px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.container .form #bookingButtonId{
+    margin-top: 110px;
+    background-color: #12C998;
+    box-shadow: 0px 2px 6px #000000;
+}
+
+.container .form #bookingButtonId:hover{
+    transform: scale(1.1);
+}
+
+.container .form #cancelButtonId{
+    margin-top: 10px;
+    background-color: white;
+    margin-left: 145px;
+    color: #12C998;
+}
+
+/* Container */
+.container{
+    margin-left: 400px;
+    padding-top: 100px;
+}
+
+.container .header{
+    padding-bottom: 30px;
+}
+
+.container .info{
+    padding-bottom: 20px;
+}
+
+.container tr td{
+    padding: 10px;
+}
+
+.container .header a{
+    text-decoration: none;
+    color: black;
+}
+
+.container .form{
+    padding-bottom: 90px;
+}
+
+/* Container Info */
+.container .info{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.container .info .rute{
+    border-radius: 19px;
+    background-color: whitesmoke;
+    width: 100px;
+    height: 29px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.container .info .rute p{
+    color: #12C998;
+    text-align: center;
+    line-height: 29px;
+}
+
+/* Footer */
+footer{
+    bottom: 0;
+}
+
+footer .footer{
+    background-color: #12C998;
+    color: #fff;
+    height: 50px;
+    bottom: 0;
+}
+
+footer .footer p{
+    font-size: 12px;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer .information{
+    background-color: whitesmoke;
+    height: 300px;
+}
+
+.Category{
+    padding-top: 30px;
+    float: left;
+    padding-left: 140px;
+}
+
+.Category p{
+    line-height: 30px;
+}
+
+.Category h3{
+    color: #116466;
+}
+
+.Category a{
+    text-decoration: none;
+    color: #12C998;
+}
+
+.Category a:hover{
+    color: chocolate;
+}
+
+.Connect{
+    float: right;
+    padding-right: 150px;
+    padding-top: 30px;
+}
+
+.Connect h3{
+    color: #116466;
+}
+
+.contacts{
+    padding-top: 23px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.Connect .contacts img:hover{
+    transform: scale(1.2);
+}
+
+/* Responsive breakpoints */
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+    nav{
+        opacity: 0;
+    }
+
+    .navi{
+        opacity: 1;
+    }
+    
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin-left: 900px;
+        width: 20%;
+        justify-content: space-between;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+
+    .container{
+        margin-left: 220px;
+        padding-top: 20px;
+    }
+
+    .container .info{
+        gap: 30px;
+    }
+
+    .container .booking #bookingButtonId{
+        margin-top: 60px;
+        border-radius: 19px;
+        width: 300px;
+        height: 60px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        background-color: #12C998;
+        box-shadow: 0px 2px 6px #000000;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+
+    .container .form #bookingButtonId,
+    .container .form #cancelButtonId{
+        width: 250px;
+        height: 40px;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    .container .form #cancelButtonId{
+        padding-left: 17px;
+    }
+
+    footer .footer{
+       opacity: 0;
+    }
+
+    footer .information{
+        background-color: whitesmoke;
+        height: 580px;
+    }
+}
+/* Ukuran Mobile */
+@media screen and (max-width: 576px){
+    nav{
+        opacity: 0;
+    }
+
+    .navi{
+        opacity: 1;
+    }
+    
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin-left: 900px;
+        width: 20%;
+        justify-content: space-between;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+
+    .container{
+        margin-left: 120px;
+        padding-top: 20px;
+    }
+
+    .container .info{
+        gap: 30px;
+    }
+
+    .container .booking #bookingButtonId{
+        margin-top: 60px;
+        border-radius: 19px;
+        width: 300px;
+        height: 60px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        background-color: #12C998;
+        box-shadow: 0px 2px 6px #000000;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+
+    .container .form #bookingButtonId,
+    .container .form #cancelButtonId{
+        width: 250px;
+        height: 40px;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    .container .form #cancelButtonId{
+        padding-left: 17px;
+    }
+
+    footer .footer{
+       opacity: 0;
+    }
+
+    footer .information{
+        background-color: whitesmoke;
+        height: 580px;
+    }
+}

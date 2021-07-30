@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Container */
+.container{
+    margin: 30px 36%;
+}
+
+/* Container Logo */
+.logo{
+    background-image: url(../Gambar/LogoMedicia.png);
+    width: 400px;
+    height: 200px;
+}
+
+/* Container Input */
+.container form #username,
+.container form #password{
+    width: 300px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+    box-shadow: 0px 2px 5px grey;
+    border: none;
+    text-indent: 25px;
+}
+
+.container form #username::placeholder,
+.container form #password::placeholder{
+    font-size: 20px;
+}
+
+/* Container Button*/
+.container form #signInButtonId,
+.container form #signUpButtonId{
+    margin: 0px 11%;
+    border-radius: 19px;
+    width: 300px;
+    height: 40px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.container form #signInButtonId{
+    margin-top: 110px;
+    background-color: #12C998;
+    box-shadow: 0px 2px 6px #000000;
+}
+
+.container form #signUpButtonId{
+    margin-top: 10px;
+    background-color: white;
+    color: #12C998;
+}
+
+/* Responsive for tablet */
+@media screen and (max-width: 768px){
+    .logo{
+        margin-left: -0px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 340px;
+        height: 150px;
+    }
+    .container form #username,
+    .container form #password{
+        width: 250px;
+        height: 40px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    .container form #signInButtonId,
+    .container form #signUpButtonId{
+        margin-left: 30px;
+        width: 250px;
+    }
+}
+
+/* Responsive for mobile phone*/
+@media screen and (max-width: 576px){
+    .logo{
+        margin-left: -25px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 340px;
+        height: 150px;
+    }
+    .container form #username,
+    .container form #password{
+        width: 250px;
+        height: 40px;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .container form #signInButtonId,
+    .container form #signUpButtonId{
+        margin-left: 0px;
+        width: 250px;
+    }
+}

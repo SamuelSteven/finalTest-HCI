@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="logo"></div>
+    
+        <form id="contactId" name="contactForm" method="POST" action="#" onsubmit="return false;">
+            <div>
+                <input type="text" id="username" name="username" size="30" placeholder="Username" />
+            </div>
+            <div>
+                <input type="password" id="password" name="password" size="30" placeholder="Password"/>
+            </div>
+            <div>
+                <input type="button" id="signInButtonId" name="signInButton" value="Masuk" onclick="submit_contact_json();"/>
+                <br>
+                <input type="button" id="signUpButtonId" name="signUpButton" value="Buat Akun"/>
+            </div>
+        </form>
+    
+        <div id="message"></div>
+
+    </div>
+   
+    <script src="signup.js"></script>
+    
+</body>
+</html>
